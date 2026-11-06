@@ -1,0 +1,26 @@
+<!-- Name: Abhinav Yadav -->
+<!-- Roll Number: 2510303021 -->
+<!-- Assignment: 9 - Task 1 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Task 1</title>
+</head>
+<body>
+
+    <h1 id="heading">Welcome</h1>
+
+    <button id="changeButton">Change text</button>
+
+    <script>
+        let heading = document.getElementById("heading");
+        let button = document.getElementById("changeButton");
+
+        button.addEventListener("click", function() {
+            heading.textContent = "Button clicked";
+        });
+    </script>
+
+</body>
+</html>

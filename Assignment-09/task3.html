@@ -1,0 +1,31 @@
+<!-- Name: Abhinav Yadav -->
+<!-- Roll Number: 2510303021 -->
+<!-- Assignment: 9 - Task 3 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Local Storage Task</title>
+</head>
+<body>
+
+    <h2>My Notes</h2>
+
+    <input type="text" id="note" placeholder="Enter your note">
+
+    <button id="saveButton">Save</button>
+
+    <script>
+        let noteBox = document.getElementById("note");
+        let saveButton = document.getElementById("saveButton");
+
+        noteBox.value = localStorage.getItem("note") || "";
+
+        saveButton.addEventListener("click", function() {
+            localStorage.setItem("note", noteBox.value);
+            alert("Note saved!");
+        });
+    </script>
+
+</body>
+</html>

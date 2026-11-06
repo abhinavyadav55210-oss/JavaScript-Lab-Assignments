@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+</head>
+<body>
+
+    <h2>What is 2 + 3?</h2>
+
+    <input type="radio" name="answer" value="4"> 4
+    <input type="radio" name="answer" value="5"> 5
+    <input type="radio" name="answer" value="6"> 6
+
+    <br><br>
+
+    <button onclick="checkAnswer()">Check Answer</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkAnswer() {
+            let selected = document.querySelector('input[name="answer"]:checked');
+
+            if (selected && selected.value == "5") {
+                document.getElementById("result").innerHTML = "Correct";
+            } else {
+                document.getElementById("result").innerHTML = "Try again";
+            }
+        }
+    </script>
+
+</body>
+</html>
